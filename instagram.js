@@ -15,10 +15,12 @@ module.exports = {
       bioUrl: results.graphql.user.external_url,
       id: results.graphql.user.id,
       isPrivate: results.graphql.user.is_private,
+      posts: results.graphql.user.edge_owner_to_timeline_media.count,
     };
     return data;
   },
   /**
+   *
    * @param {*} postId Put id after p/
    * @example https://www.instagram.com/p/CRtrth5oJTV/
    */
