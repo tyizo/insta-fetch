@@ -18,6 +18,10 @@ module.exports = {
     };
     return data;
   },
+  /**
+   * @param {*} postId Put id after p/
+   * @example https://www.instagram.com/p/CRtrth5oJTV/
+   */
   fetchPost: async function (postId) {
     let url = `https://www.instagram.com/p/${postId}/?__a=1`;
     let results = await fetch(url);
